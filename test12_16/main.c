@@ -66,7 +66,7 @@
         printf("\n");
     }
 }*/
-main()
+/*main()
 {
     double x = 0.1;
     double s = 0;
@@ -81,7 +81,8 @@ main()
         i++;
     }
     printf("%lf",s);
-}
+}*/
+
 
 
 
