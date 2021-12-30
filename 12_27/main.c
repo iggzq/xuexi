@@ -6,6 +6,7 @@ struct stu
     char name[10];
     int age;
 };
+/*
 Printf_int(int* a,int len)
 {
     int i;
@@ -24,10 +25,12 @@ Printf_float(float (*a)[10],int len)
     }
     printf("\n");
 }
+*/
 int cmp_int(const void* e1,const void* e2)
 {
     return *(int*)e1 - *(int*)e2;
 }
+/*
 int cmp_float(const void* e1,const void* e2)
 {
     if(*(float*)e1 - *(float*)e2 == 0)
@@ -85,6 +88,7 @@ cmp5()
     int len = sizeof (o)/sizeof (o[0]);
     qsort(o,len,sizeof (o[0]),cmp_char);
 }
+*/
 swap(char* e1,char* e2,int width)
 {
     int i = 0;
@@ -124,11 +128,11 @@ cmp6()
     printf("\n");
 }
 int main() {
-    cmp1();
+    /*cmp1();
     cmp2();
     cmp3();
     cmp4();
-    cmp5();
+    cmp5();*/
     cmp6();
     return 0;
 }
