@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/xuexi/memory/main.cpp
+iostream
+-
+stdio.h
+-
+stdlib.h
+D:/xuexi/memory/stdlib.h
+string.h
+D:/xuexi/memory/string.h
+
