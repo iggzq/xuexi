@@ -5,14 +5,31 @@
 
 
 void InitContact(struct Contact *ps) {
-    memset(ps->data, 0, sizeof(ps->data));
+    ps->data = (infortmation *)malloc(DEFAULT_MAX*sizeof (infortmation));
+    if(ps->data == NULL)
+    {
+        return;
+    }
     ps->size = 0;
+    ps->max = DEFAULT_MAX;
 }
-
+void Check(struct Contact *p){
+        infortmation* ptr = (infortmation *)realloc(p->data,(p->max+2)*sizeof (infortmation));
+        if(ptr != NULL)
+        {
+            p->data = ptr;
+            p->max+=2;
+            printf("增容成功\n");
+        }
+        else
+        {
+            printf("开辟失败\n");
+        }
+}
 void AddContact(struct Contact *ps) {
-    if (ps->size == MAX) {
-        printf("数据已满\n");
-    } else {
+    if(ps->size == ps->max) {
+        Check(ps);
+    }
         printf("请输入姓名：");
         scanf("%s", ps->data[ps->size].name);
         printf("请输入年龄：");
@@ -26,7 +43,6 @@ void AddContact(struct Contact *ps) {
         ps->size++;
         // 保存
         printf("添加成功\n");
-    }
 }
 
 void ShowContact(struct Contact *ps) {
