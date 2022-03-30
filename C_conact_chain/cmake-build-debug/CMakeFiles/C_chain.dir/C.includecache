@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/xuexi/C_conact_chain/Conact.h
+stdio.h
+-
+malloc.h
+-
+string.h
+D:/xuexi/C_conact_chain/string.h
+
+D:/xuexi/C_conact_chain/Contact.c
+Conact.h
+D:/xuexi/C_conact_chain/Conact.h
+
+D:/xuexi/C_conact_chain/main.c
+Contact.c
+D:/xuexi/C_conact_chain/Contact.c
+
